@@ -12,7 +12,9 @@ const app = express();
 
 //connect to database
 
-mongoose.connect(process.env.DB, {useNewUrlParser: true})
+const DBPath = '54.156.31.146';
+
+mongoose.connect(DBPath, {useNewUrlParser: true})
         .then(() => console.log('Database connected'))
         .catch(err => console.log(err));
 

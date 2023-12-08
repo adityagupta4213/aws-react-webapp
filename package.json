@@ -15,12 +15,11 @@
     "body-parser": "^1.18.3",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
-    "mongoose": "^5.4.4",
+    "mongoose": "^5.13.21",
     "path": "^0.12.7"
   },
   "devDependencies": {
     "concurrently": "^4.0.1",
     "nodemon": "^1.18.4"
-    }
-
+  }
 }
