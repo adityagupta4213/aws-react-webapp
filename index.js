@@ -12,7 +12,7 @@ const app = express();
 
 //connect to database
 
-const DBPath = '54.156.31.146';
+const DBPath = 'mongodb://54.156.31.146:27017';
 
 mongoose.connect(DBPath, {useNewUrlParser: true})
         .then(() => console.log('Database connected'))
@@ -26,6 +26,8 @@ app.use((req,res,next) => {
     res.header("Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
+
+app.use(express.static("./client/build"));
 
 
 app.listen(port, () => {
