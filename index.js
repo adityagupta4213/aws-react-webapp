@@ -6,13 +6,13 @@ const routes = require('./routes/api/todo');
 
 require('dotenv').config();
 
-const port = process.env.PORT || 5050;
+const port = 80;
 
 const app = express();
 
 //connect to database
 
-const DBPath = 'mongodb://54.156.31.146:27017';
+const DBPath = 'mongodb://54.156.31.146:27017/todo-app-db';
 
 mongoose.connect(DBPath, {useNewUrlParser: true})
         .then(() => console.log('Database connected'))
